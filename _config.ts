@@ -9,7 +9,6 @@ import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import metas from "lume/plugins/metas.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
 import attributes from "lume/plugins/attributes.ts";
-import base_path from "lume/plugins/base_path.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 import imagick from "lume/plugins/imagick.ts";
 import inline from "lume/plugins/inline.ts";
@@ -17,11 +16,12 @@ import jsx_preact from "lume/plugins/jsx_preact.ts";
 import liquid from "lume/plugins/liquid.ts";
 import minify_html from "lume/plugins/minify_html.ts";
 import modify_urls from "lume/plugins/modify_urls.ts";
-import relative_urls from "lume/plugins/relative_urls.ts";
 import resolve_urls from "lume/plugins/resolve_urls.ts";
 import svgo from "lume/plugins/svgo.ts";
 import terser from "lume/plugins/terser.ts";
 import code_highlight from "lume/plugins/code_highlight.ts";
+import basePath from "lume/plugins/base_path.ts";
+
 
 // import netlify_cms from "lume/plugins/netlify_cms.ts";
 
@@ -42,7 +42,6 @@ site.use(
     }
   }));
 site.use(attributes());
-site.use(base_path());
 site.use(date());
 site.use(esbuild());
 site.use(imagick());
@@ -53,7 +52,7 @@ site.use(liquid());
 site.use(metas());
 site.use(minify_html());
 site.use(modify_urls());
-site.use(relative_urls());
+site.use(basePath());
 site.use(resolve_urls());
 site.use(svgo());
 site.use(terser());
