@@ -2,7 +2,7 @@
 
     <div class="mt-8 lg:-mx-6 lg:flex lg:items-center">
 
-        <img class="object-cover border-none w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96" src="/minimalist-blog-github-page/{{ post.data.image }}" alt="{{ post.data.title }}">
+        <img class="object-cover border-none w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96" src="{{ post.data.image }}" alt="{{ post.data.title }}">
 
         <div class="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
 
@@ -25,7 +25,7 @@
 
                     {% for author in post.data.author %}
 
-                        <img class="border-none object-cover object-center w-10 h-10 rounded-full" src="/minimalist-blog-github-page/{{ author.image}}" alt="{{ author.author_name}}">
+                        <img class="border-none object-cover object-center w-10 h-10 rounded-full" src="{{ author.image}}" alt="{{ author.author_name}}">
 
                         <div class="mx-4">
                             <a href="{{author.url}}" class="text-sm text-gray-700 dark:text-gray-200">
@@ -37,7 +37,7 @@
                     {% endfor %}
                 {% else %}
 
-                    <img class="border-none object-cover object-center w-10 h-10 rounded-full" src="/minimalist-blog-github-page/{{ post.data.author.image}}" alt="{{ post.data.author.name}}">
+                    <img class="border-none object-cover object-center w-10 h-10 rounded-full" src="{{ post.data.author.image}}" alt="{{ post.data.author.name}}">
 
                     <div class="mx-4">
                         <a href="{{ post.data.author.url}}" class="text-sm text-gray-700 dark:text-gray-200">
@@ -47,7 +47,6 @@
                         </p>
                     </div>
                 {% endif %}
-
             </div>
         </div>
     </div>
